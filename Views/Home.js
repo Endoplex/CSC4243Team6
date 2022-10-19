@@ -1,14 +1,16 @@
 const express = require('express')
 const path = require('path')
 const fs = require('fs')
-const Home = express.router();
+const Home = express.Router();
 
-root = path.join(__dirname, '.');
-home.use()
-home.get('/', (req, res) => {
-    res.redirect('/Home: ' + root);
+root = path.join(__dirname, '..');
+Home.get('/', (req, res) => {
+    res.redirect('/Home');
 });
-home.get('/Home', (req, res) => {
-    console.log('Found Home');
-    //res.sendFile(path.join(path.join(__dirname, )))
+Home.get('/Home', (req, res) => {
+    console.log('Found Home: \n');
+    console.log(root);
+    res.sendFile(path.join(path.join(root, 'HTML', 'Home.html')));
 });
+
+module.exports = Home;
