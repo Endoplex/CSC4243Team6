@@ -3,14 +3,20 @@ const path = require('path')
 const fs = require('fs')
 const Home = express.Router();
 
-root = path.join(__dirname, '..');
+root = "CSC4243Team6\\React\\HomeModules.js";
+
+
 Home.get('/', (req, res) => {
     res.redirect('/Home');
+    console.log(root);
 });
 Home.get('/Home', (req, res) => {
-    console.log('Found Home: \n');
-    console.log(root);
-    res.sendFile(path.join(path.join(root, 'HTML', 'Home.html')));
+    try{ 
+        console.log('Found Home: ', root, '\n');
+        //res.sendFile(path.join(path.join(root, 'HTML', 'Home.html')));
+    } catch(err){
+        console.log("Site not found");
+    }
 });
 
 module.exports = Home;
