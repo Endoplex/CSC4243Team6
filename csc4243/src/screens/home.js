@@ -7,7 +7,7 @@ class Home extends React.Component {
     }
     render() {
         <title>Account</title>,
-        <h1>Create New Resume</h1>
-        <
+        <h1>Create New Resume</h1>,
+        <h2></h2>
     }
 }
