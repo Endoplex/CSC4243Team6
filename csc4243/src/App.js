@@ -10,7 +10,7 @@ import ExperienceScreen from './screens/experience.js';
 import DesignScreen from './screens/design.js';
 import PersonalScreen from './screens/personal.js';
 import ResultScreen from './screens/result.js';
- Hewwo 
+
 function App() {
   return (
     <div className="App">
