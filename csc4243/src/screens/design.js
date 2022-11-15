@@ -17,12 +17,14 @@ return (
             <div class="left-arrow" onClick={() => navigate('/experience')}> <FaArrowLeft /> </div>
             <h1>Design</h1>
     </div>
-    <h1>Design page.</h1>
+    <h3>Select a layout for your resume</h3>
     <div className="Design">
-            <img className="style" src={basic} alt="" />
-            <img className="style" src={professional} alt="" />
-            <img className="style" src={green} alt="" />
-            <img className="style" src={silicon} alt="" />
+            <div layouts>
+                <img className="style" src={basic} alt="" tabIndex={1}/>
+                <img className="style" src={professional} alt="" tabIndex={1}/>
+                <img className="style" src={green} alt="" tabIndex={1}/>
+                <img className="style" src={silicon} alt="" tabIndex={1}/>
+            </div>
             <br />
             <button onClick={() => {{(navigate('/result'))}}}>Result</button>
         </div>
