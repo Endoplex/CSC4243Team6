@@ -6,8 +6,12 @@ const Page = () => {
 
     return (
         <div className = "result">
-            <button onClick={() => {{(navigate('/home'))}}}>Home</button>
+            <div className="Header">
+                <h1>Your Resume</h1>
+            </div>
             <img src={resume} alt="" />
+            <br />
+            <button onClick={() => {{(navigate('/home'))}}}>Home</button>
         </div>
     );
 }
