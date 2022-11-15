@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { NavigationType, useNavigate } from "react-router-dom";
-import Header from '../components/Header';
 import '../App.css';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';

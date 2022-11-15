@@ -8,13 +8,15 @@ const Page = () => {
     return (
         <div className = "result">
             <div className="Header">
-            <div class="left-arrow" onClick={() => navigate('/design')}> <FaArrowLeft /> </div>
-            <div className="Logo"><h1>Online Resume Builder</h1></div>
-            <div className="Header_text"><h1>Your Resume</h1></div>
+                <div class="left-arrow" onClick={() => navigate('/design')}> <FaArrowLeft /> </div>
+                <div className="Logo"><h1>Online Resume Builder</h1></div>
+                <div className="Header_text"><h1>Your Resume</h1></div>
             </div>
             <img src={resume} alt="" />
             <br />
-            <button onClick={() => {{(navigate('/home'))}}}>Home</button>
+            <a href="../images/finished_resume.pdf" download>
+                <button style={{ width: "175px", height: "60px" }} onClick={() => null }>Download Resume</button>
+            </a>
         </div>
     );
 }
