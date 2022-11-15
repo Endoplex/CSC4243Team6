@@ -8,8 +8,8 @@ const Page = () => {
     return (
         <div class="home">
             <div className="Header">
-                <h1>Online Resume Builder</h1>
-                <div className="Header-Subheader"><h1>Home</h1></div>
+                <div className="Logo"><h1>Online Resume Builder</h1></div>
+                <div className="Header_text"><h1>Home</h1></div>
             </div>
             <h1>Before we get started, what industry/major do you classify under?</h1>
             <select style={{ width: "175px", height: "50px" }} name="industry" id="industry">

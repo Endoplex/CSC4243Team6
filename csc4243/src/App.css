@@ -28,32 +28,47 @@
   color: #61dafb;
 }
 
-.Header {
-  box-sizing: border-box;
+.Header  {
+  /* box-sizing: border-box;
+  background-color: rgb(39, 117, 69);
+  width: 100%;
+  margin: auto;
+  position: fixed;
+  align-items: baseline;
+  justify-content: center; */
+  box-sizing: display-box;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: baseline;
-  padding: 0em;
-  margin-bottom: 1em;
-  background-color: rgb(39, 117, 69);
-  color: #fff;
-}
-
-.Header-Subheader {
-  box-sizing: border-box;
-  width: 100%;
-  justify-content: center;
-  align-items: normal;
   padding: 1em;
   margin-bottom: 2em;
   background-color: rgb(39, 117, 69);
-  color: #fff;
+}
+
+.Header_text {
+  color: white;
+  font-size: 20px;
+  padding-right: 0vw;
+  margin-top: 0;
+  line-height: 3rem;
+  text-align: center;
+  margin-right: 3vh;
+}
+
+.Logo {
+  color: white;
+  font-size: 20px;
+  padding-right: 0vw;
+  margin-top: 0;
+  line-height: 1rem;
+  text-align: left;
 }
 
 .left-arrow {
   position: absolute;
   cursor: pointer;
+  color: white;
 }
 
 @keyframes App-logo-spin {

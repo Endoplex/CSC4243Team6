@@ -36,6 +36,7 @@ html {
 
 /* Popup container */
 .popup {
+    margin-top: 10px;
     margin-left: 2px;
     position: relative;
     display: inline-block;

@@ -35,7 +35,8 @@ const Page = () => {
         <div className = "personal">
             <div className="Header">
                 <div class="left-arrow" onClick={() => navigate('/home')}> <FaArrowLeft /> </div>
-                <h1 class="center">Personal Information</h1>
+                <div className="Logo"><h1>Online Resume Builder</h1></div>
+                <div className="Header_text"><h1>Personal Information</h1></div>
             </div>
             <Box sx={{ align: 'center'}}>
                 <div>

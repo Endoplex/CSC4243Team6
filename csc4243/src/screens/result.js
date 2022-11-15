@@ -9,7 +9,8 @@ const Page = () => {
         <div className = "result">
             <div className="Header">
             <div class="left-arrow" onClick={() => navigate('/design')}> <FaArrowLeft /> </div>
-                <h1>Your Resume</h1>
+            <div className="Logo"><h1>Online Resume Builder</h1></div>
+            <div className="Header_text"><h1>Your Resume</h1></div>
             </div>
             <img src={resume} alt="" />
             <br />
