@@ -1,7 +1,7 @@
 import { NavigationType, useNavigate } from "react-router-dom";
 import '../components/css/education.css';
 import '../App.css';
-import { FaQuestionCircle } from "react-icons/fa";
+import { FaQuestionCircle, FaArrowLeft } from "react-icons/fa";
 
 const Page = () => {
     let navigate = useNavigate();
@@ -29,6 +29,7 @@ const Page = () => {
     return (
         <div class="education">
             <div className="Header">
+                <div class="left-arrow" onClick={() => navigate('/personal')}> <FaArrowLeft /> </div>
                 <h1>Education Information</h1>
             </div>
             <h1>Please fill out your up-to-date education information to open your resume!</h1>
