@@ -14,20 +14,17 @@ import ResultScreen from './screens/result.js';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> hello
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<HomeScreen />} />
+          <Route path='/home' element={<HomeScreen />} />
+          <Route path='/education' element={<EducationScreen />} />
+          <Route path='/experience' element={<ExperienceScreen />} />
+          <Route path='/design' element={<DesignScreen />} />
+          <Route path='/personal' element={<PersonalScreen />} />
+          <Route path='/result' element={<ResultScreen />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
