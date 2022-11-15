@@ -1,10 +1,16 @@
 import { NavigationType, useNavigate } from "react-router-dom";
+import '../App.css';
 
 const Page = () => {
     let navigate = useNavigate();
 
     return (
-        <button onClick={() => {{(navigate('/design'))}}}>Design</button>
+        <div className="Experience">
+            <div className="Header">
+                <h1>Experiences</h1>
+            </div>
+            <button onClick={() => {{(navigate('/design'))}}}>Design</button>
+        </div>
     );
 }
 

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { NavigationType, useNavigate } from "react-router-dom";
 import Header from '../components/Header';
+import '../App.css';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import FormControl from '@mui/material/FormControl';
@@ -30,7 +31,9 @@ const Page = () => {
 
     return (
         <div className = "personal">
-            <Header />
+            <div className="Header">
+                <h1>Personal Information</h1>
+            </div>
             <Box sx={{ align: 'center'}}>
                 <div>
 
@@ -118,7 +121,7 @@ const Page = () => {
                     </FormControl>
                 </div>
             </Box>
-            <button onClick={() => {{(navigate('/education'))}}}>to Education</button>
+            <button style={{ width: "175px", height: "60px" }} onClick={() => {{(navigate('/education'))}}}>To Education</button>
         </div>
     );
 }

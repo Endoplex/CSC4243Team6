@@ -1,5 +1,6 @@
 import { NavigationType, useNavigate } from "react-router-dom";
 import '../components/css/education.css';
+import '../App.css';
 import { FaQuestionCircle } from "react-icons/fa";
 
 const Page = () => {
@@ -27,6 +28,9 @@ const Page = () => {
 
     return (
         <div class="education">
+            <div className="Header">
+                <h1>Education Information</h1>
+            </div>
             <h1>Please fill out your up-to-date education information to open your resume!</h1>
             <h1>Education</h1>
 
