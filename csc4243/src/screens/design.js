@@ -5,6 +5,7 @@ import professional from '../images/template_professional.png';
 import green from '../images/template_green.png';
 import silicon from '../images/template_silicon.png';
 import '../components/css/design.css';
+
 import { FaQuestionCircle, FaArrowLeft } from "react-icons/fa";
 import '../App.css';
 
