@@ -1,11 +1,8 @@
-import { NavigationType, useNavigate } from "react-router-dom";
+const React = require('react');
 
-const Page = () => {
-    let navigate = useNavigate();
-
-    return (
-        <button onClick={() => {{(navigate('/personal'))}}}>Personal</button>
-    );
+class Home extends React.Component {
+    constructor(props) {
+        super(props)
+        this.props
+    }
 }
-
-export default Page;
