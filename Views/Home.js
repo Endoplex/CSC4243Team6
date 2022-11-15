@@ -1,6 +1,7 @@
-const express = require('express')
-const path = require('path')
-const fs = require('fs')
+const express = require('express');
+const path = require('path');
+const fs = require('fs');
+const React = require('React');
 const Home = express.Router();
 
 root = "CSC4243Team6\\React\\HomeModules.js";

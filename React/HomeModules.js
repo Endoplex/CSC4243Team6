@@ -1,6 +1,10 @@
 const React = require('React')
 
 class TitleBar extends React.Component {
+    constructor(self) { 
+        super(self) 
+    }
+
     TitleBar() {
         React.createElement('div', {className: 'TitleBar'}), //<div className = "Title Bar" type="">
         React.createElement('title', {Home}), //<title> HOME </title>
@@ -8,11 +12,16 @@ class TitleBar extends React.Component {
     }
 }
 
+class body extends React.Component {
+    render() {
+        return ( <div id="root"></div> );
+    }
+}
+
 class TextBox extends React.Component {
     constructor(self) {
-        super(self);
+        super(self); 
         this.text = '';
-
         this.handleEvent = this.handleChange.bind(this);
     }
 
@@ -21,7 +30,11 @@ class TextBox extends React.Component {
     }
 
     submit(event){
-        
+        //create saving mechanism later
+        try { console.log('submitted');
+        } catch(err) {
+            console.log('error, no data');
+        }
     }
 
     render() {
@@ -29,13 +42,12 @@ class TextBox extends React.Component {
             <form>
                 <label>
                     <input type="text" value = {this.text} onChange = 
-                    {this.handleEvent}/>
+                    {this.handleEvent()}/>
                 </label>
-                <input type = "button" onClick = {this.submit}/>
+                <input type = "submit" onClick = {this.submit}/>
             </form>
-
         );
     }
 }
 
-ReactDOM.render(TitleBar, TextBox, document.body);
+ReactDOM.render({TitleBar, TextBox}, body.getIdByElement(root));
