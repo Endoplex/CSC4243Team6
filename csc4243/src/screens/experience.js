@@ -4,6 +4,7 @@ import '../App.css';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import FormControl from '@mui/material/FormControl';
+import { FaQuestionCircle, FaArrowLeft } from "react-icons/fa";
 
 const Page = () => {
     const [values, setValues] = React.useState({
@@ -28,6 +29,7 @@ const Page = () => {
     return (
         <div className="Experience">
             <div className="Header">
+                <div class="left-arrow" onClick={() => navigate('/education')}> <FaArrowLeft /> </div>
                 <h1>Experiences</h1>
             </div>
             <FormControl sx={{ m: 3, width: '35ch' }} variant="standard">

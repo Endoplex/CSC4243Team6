@@ -11,7 +11,7 @@ const Page = () => {
                 <h1>Online Resume Builder</h1>
                 <div className="Header-Subheader"><h1>Home</h1></div>
             </div>
-            <h1>Before we get started, what industry does your major classify as?</h1>
+            <h1>Before we get started, what industry/major do you classify under?</h1>
             <select style={{ width: "175px", height: "50px" }} name="industry" id="industry">
                 <option value="" disabled selected>Select Your Option</option>
                 <option value="engineering">Engineering</option>
@@ -21,8 +21,10 @@ const Page = () => {
                 <option value="social">Social Sciences</option>
                 <option value="social">Business</option>
             </select>
-            <h1>CREATE YOUR RESUME HERE</h1>
+            <h1>CREATE YOUR RESUME (for new users)</h1>
             <button style={{ width: "175px", height: "60px" }} onClick={() => navigate('/personal')}>Start Resume</button>
+            <h1>More Experienced? Create a New CV</h1>
+            <button style={{ width: "175px", height: "60px" }} onClick={() => navigate('/personal')}>Start CV</button>
         </div>
     );
 }
