@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavigationType, useNavigate } from "react-router-dom";
-import {ArrowLeft} from 'react-feather';
+
 import { FaQuestionCircle, FaArrowLeft } from "react-icons/fa";
 import '../App.css';
 
