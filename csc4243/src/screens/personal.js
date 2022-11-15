@@ -7,7 +7,8 @@ import TextField from '@mui/material/TextField';
 import FormControl from '@mui/material/FormControl';
 import Input from '@mui/material/InputLabel';
 import FormHelperText from '@mui/material/FormHelperText';
-
+import { FaQuestionCircle, FaArrowLeft } from "react-icons/fa";
+import '../components/css/personal.css';
 
 const Page = () => {
     const [values, setValues] = React.useState({
@@ -32,7 +33,8 @@ const Page = () => {
     return (
         <div className = "personal">
             <div className="Header">
-                <h1>Personal Information</h1>
+                <div class="left-arrow" onClick={() => navigate('/home')}> <FaArrowLeft /> </div>
+                <h1 class="center">Personal Information</h1>
             </div>
             <Box sx={{ align: 'center'}}>
                 <div>
