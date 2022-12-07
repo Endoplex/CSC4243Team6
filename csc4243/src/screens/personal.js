@@ -10,22 +10,28 @@ import FormHelperText from '@mui/material/FormHelperText';
 import { FaQuestionCircle, FaArrowLeft } from "react-icons/fa";
 import '../components/css/personal.css';
 
-const Page = () => {
-    const [values, setValues] = React.useState({
-        name: '',
-        personalphone: '',
-        email: '',
-        streetname: '',
-        city: '',
-        state: '',
-        zip: '',
-        country: '',
-        extraaddres: '',
-        linkedin: ''
-      });
+const personalDefaultValues = {
+    name: '',
+    personalphone: '',
+    email: '',
+    streetname: '',
+    city: '',
+    state: '',
+    zip: '',
+    country: '',
+    extraaddres: '',
+    linkedin: ''
+};
 
-    const handleChange = (prop) => (event) => {
-        setValues({ ...values, [prop]: event.target.value });
+const Page = () => {
+
+
+
+    const [values, setValues] = React.useState(personalDefaultValues);
+
+    const handleInputChange = (e) => {
+        const {name, value} = e.target;
+        setValues({ ...values, [name]: e.target.value });
     };
 
     let navigate = useNavigate();
@@ -33,7 +39,7 @@ const Page = () => {
     return (
         <div className = "personal">
             <div className="Header">
-                <div class="left-arrow" onClick={() => navigate('/home')}> <FaArrowLeft /> </div>
+                <div className="left-arrow" onClick={() => navigate('/home')}> <FaArrowLeft /> </div>
                 <div className="Logo"><h1>Online Resume Builder</h1></div>
                 <div className="Header_text"><h1>Personal Information</h1></div>
             </div>
@@ -42,91 +48,106 @@ const Page = () => {
 
                     <FormControl sx={{ m: 3, width: '35ch' }} variant="standard">
                         <TextField
-                            id="standard-textfield"
+                            id="fullNameInput"
+                            name = "name"
                             label="Full Name"
-                            values={values.name}
-                            onChange={handleChange}
+                            type = "text"
+                            value={values.name}
+                            onChange={handleInputChange}
                             variant="standard"
                         />
                         <TextField
-                            id="standard-textfield"
+                            id="phoneInput"
+                            name="personalphone"
                             label="Personal Phone Number"
                             values={values.personalphone}
-                            onChange={handleChange}
+                            onChange={handleInputChange}
                             variant="standard"
                         />
                         <TextField
-                            id="standard-textfield"
+                            id="emailInput"
+                            name="email"
                             label="Email Address"
                             values={values.email}
-                            onChange={handleChange}
+                            onChange={handleInputChange}
                             variant="standard"
                         />
                     </FormControl>
 
                     <FormControl sx={{ m: 3, width: '35ch' }} variant="standard">
                         <TextField
-                            id="standard-textfield"
+                            id="streetNameInput"
+                            name="streetname"
                             label="Street Name"
                             values={values.streetname}
-                            onChange={handleChange}
+                            onChange={handleInputChange}
                             variant="standard"
                         />
                         <TextField
-                            id="standard-textfield"
+                            id="cityInput"
+                            name="city"
                             label="City"
                             values={values.city}
-                            onChange={handleChange}
+                            onChange={handleInputChange}
                             variant="standard"
                         />
                         <TextField
-                            id="standard-textfield"
+                            id="stateInput"
+                            name="state"
                             label="State"
                             values={values.state}
-                            onChange={handleChange}
+                            onChange={handleInputChange}
                             variant="standard"
                         />
                         <TextField
-                            id="standard-textfield"
+                            id="zipInput"
+                            name="zip"
                             label="Zip Code"
                             values={values.zip}
-                            onChange={handleChange}
+                            onChange={handleInputChange}
                             variant="standard"
                         />
                         <TextField
-                            id="standard-textfield"
+                            id="countryInput"
+                            name="country"
                             label="Country"
                             values={values.country}
-                            onChange={handleChange}
+                            onChange={handleInputChange}
                             variant="standard"
                         />
                         <TextField
-                            id="standard-textfield"
+                            id="extraAddInput"
+                            name="extraaddres"
                             label="Apt. num, building num, etc"
                             values={values.extraaddres}
-                            onChange={handleChange}
+                            onChange={handleInputChange}
                             variant="standard"
                         />
                     </FormControl>
 
                     <FormControl sx={{ m: 3, width: '35ch' }} variant="standard">
                         <TextField 
-                            id="standard-basic" 
+                            id="linkedInInput" 
+                            name="linkedin"
                             label="LinkedIn"
-                            values={values.linkedin} 
+                            values={values.linkedin}
+                            onChange={handleInputChange}
                             variant="standard" />
                         <TextField 
-                            id="standard-basic" 
+                            id="githubInput" 
+                            name="github"
                             label="Github" 
                             values={values.github}
-                            onChange={handleChange}
+                            onChange={handleInputChange}
                             variant="standard" />
                     </FormControl>
                 </div>
             </Box>
+            
             <button style={{ width: "175px", height: "60px" }} onClick={() => {{(navigate('/education'))}}}>To Education</button>
+            {/* <button style={{ width: "175px", height: "60px" }} onClick={console.log(values)}>Test info</button> */}
         </div>
     );
-}
+};
 
 export default Page;

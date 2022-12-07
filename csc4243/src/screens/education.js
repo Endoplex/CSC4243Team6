@@ -10,20 +10,22 @@ import MenuItem from '@mui/material/MenuItem';
 import Box from '@mui/material/Box';
 import Select from "@mui/material/Select";
 
+const educationDefaultValues = {
+    school: '',
+    major: '',
+    degree: '',
+    GPA: '',
+    month: '',
+    year: '',
+};
 const Page = () => {
     let navigate = useNavigate();
 
-    const [values, setValues] = React.useState({
-        school: '',
-        major: '',
-        degree: '',
-        GPA: '',
-        month: '',
-        year: '',
-      });
+    const [values, setValues] = React.useState(educationDefaultValues);
 
-    const handleChange = (prop) => (event) => {
-        setValues({ ...values, [prop]: event.target.value });
+    const handleChange = (e) => {
+        const{name, value} = e.target;
+        setValues({ ...values, [name]: e.target.value });
     };
 
     function majorHelp() {
@@ -47,9 +49,9 @@ const Page = () => {
     }
 
     return (
-        <div class="education">
+        <div className="education">
             <div className="Header">
-                <div class="left-arrow" onClick={() => navigate('/personal')}> <FaArrowLeft /> </div>
+                <div className="left-arrow" onClick={() => navigate('/personal')}> <FaArrowLeft /> </div>
                 <div className="Logo"><h1>Online Resume Builder</h1></div>
                 <div className="Header_text"><h1>Education Information</h1></div>
             </div>
@@ -62,7 +64,8 @@ const Page = () => {
                 
                     <div>
                         <TextField
-                            id="standard-textfield"
+                            id="schoolInput"
+                            name="school"
                             label="Institution"
                             values={values.school}
                             onChange={handleChange}
@@ -74,7 +77,8 @@ const Page = () => {
                     </div>
                     <div>
                         <TextField
-                            id="standard-textfield"
+                            id="majorInput"
+                            name="major"
                             label="Major"
                             values={values.major}
                             onChange={handleChange}
@@ -86,7 +90,8 @@ const Page = () => {
                     </div>
                     <div>
                         <TextField
-                            id="standard-textfield"
+                            id="degreeInput"
+                            name="degree"
                             label="Degree"
                             values={values.degree}
                             onChange={handleChange}
@@ -98,7 +103,8 @@ const Page = () => {
                     </div>
                     <div>
                         <TextField
-                            id="standard-textfield"
+                            id="gpaInput"
+                            name="GPA"
                             label="GPA"
                             values={values.GPA}
                             onChange={handleChange}
@@ -112,14 +118,16 @@ const Page = () => {
             <div>
             <h3>Graduation Date</h3>    
             <TextField
-                id="standard-textfield"
+                id="monthInput"
+                name="month"
                 label="Month"
                 values={values.month}
                 onChange={handleChange}
                 variant="standard"
             />
             <TextField
-                id="standard-textfield"
+                id="yearInput"
+                name="year"
                 label="Year"
                 values={values.year}
                 onChange={handleChange}
@@ -165,6 +173,7 @@ const Page = () => {
         </div>
         </Box>
         <button style={{ width: "175px", height: "60px" }} onClick={() => {{(navigate('/experience'))}}}>To Experiences</button>
+        {/* <button style={{ width: "175px", height: "60px" }} onClick={console.log(values)}>Test info</button> */}
         </div>
     );
 }
