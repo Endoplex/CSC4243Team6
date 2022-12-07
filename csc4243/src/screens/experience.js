@@ -34,6 +34,10 @@ const Page = () => {
 
     let navigate = useNavigate();
 
+    React.useEffect(() => {
+        localStorage.setItem('experienceKey', JSON.stringify(values));
+      }, [values]);
+
     return (
         <div className="Experience">
             <div className="Header">

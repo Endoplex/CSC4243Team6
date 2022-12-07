@@ -34,6 +34,10 @@ const Page = () => {
         setValues({ ...values, [name]: e.target.value });
     };
 
+    React.useEffect(() => {
+        localStorage.setItem('personalKey', JSON.stringify(values));
+      }, [values]);
+
     let navigate = useNavigate();
 
     return (

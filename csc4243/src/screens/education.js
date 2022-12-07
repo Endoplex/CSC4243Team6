@@ -28,6 +28,10 @@ const Page = () => {
         setValues({ ...values, [name]: e.target.value });
     };
 
+    React.useEffect(() => {
+        localStorage.setItem('educationKey', JSON.stringify(values));
+      }, [values]);
+
     function majorHelp() {
         var popup = document.getElementById("myPopup");
         popup.classList.toggle("show");
