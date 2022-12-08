@@ -36,7 +36,27 @@ const Page = () => {
 
     React.useEffect(() => {
         localStorage.setItem('experienceKey', JSON.stringify(values));
-      }, [values]);
+    }, [values]);
+
+    function exp1Help() {
+        var popup = document.getElementById("exp1Popup");
+        popup.classList.toggle("show");
+    }
+
+    function desc1Help() {
+        var popup = document.getElementById("desc1Popup");
+        popup.classList.toggle("show");
+    }
+
+    function exp2Help() {
+        var popup = document.getElementById("exp2Popup");
+        popup.classList.toggle("show");
+    }
+
+    function desc2Help() {
+        var popup = document.getElementById("desc2Popup");
+        popup.classList.toggle("show");
+    }
 
     return (
         <div className="Experience">
@@ -59,6 +79,9 @@ const Page = () => {
                     onChange={handleChange}
                     variant="standard"
                 />
+                <div class="popup" onClick={() => exp1Help()}><FaQuestionCircle />
+                    <span class="popuptext" id="exp1Popup">The first experience you enter should be the name of what you want to show off the most. This could be a company you worked at, an interesting project, or even research that you've done.</span>
+                </div>
                 <TextField
                     id="pos1"
                     name="position1"
@@ -92,6 +115,9 @@ const Page = () => {
                     onChange={handleChange}
                     variant="standard"
                 />
+                <div class="popup" onClick={() => desc1Help()}><FaQuestionCircle />
+                    <span class="popuptext" id="desc1Popup">Here, you should go into detail about the experience. Don't be afraid to brag if you think a particular aspect of the experience was interesting</span>
+                </div>
             </FormControl>
             </Box>      
         </div>
@@ -107,6 +133,9 @@ const Page = () => {
                     onChange={handleChange}
                     variant="standard"
                 />
+                <div class="popup" onClick={() => exp2Help()}><FaQuestionCircle />
+                    <span class="popuptext" id="exp2Popup">For the second experience, this could be either the next most interesting, or the next most recent</span>
+                </div>
                 <TextField
                     id="pos2"
                     name="position2"
@@ -140,6 +169,9 @@ const Page = () => {
                     onChange={handleChange}
                     variant="standard"
                 />
+                <div class="popup" onClick={() => desc2Help()}><FaQuestionCircle />
+                    <span class="popuptext" id="desc2Popup"></span>
+                </div>
             </FormControl>
             </Box>
         </div>
