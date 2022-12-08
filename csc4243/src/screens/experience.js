@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { NavigationType, useNavigate } from "react-router-dom";
-import '../App.css';
+import '../components/css/experience.css';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import FormControl from '@mui/material/FormControl';
@@ -40,61 +40,65 @@ const Page = () => {
 
     return (
         <div className="Experience">
-            <div className="Header">
-                <div class="left-arrow" onClick={() => navigate('/education')}> <FaArrowLeft /> </div>
-                <div className="Logo"><h1>Online Resume Builder</h1></div>
-                <div className="Header_text"><h1>Experiences</h1></div>
-            </div>
-            <div>This is where you input past work experience. Since you selected the Engineering discipline, we suggest adding projects or research you participated in as well!</div>
-            <Box sx={{ align: 'center'}}>
-            <div>
-            <FormControl sx={{ m: 3, width: '35ch' }} variant="standard">
-                        <TextField
-                            id="exp1"
-                            name="experience1"
-                            label="Experience 1"
-                            values={values.experience1}
-                            onChange={handleChange}
-                            variant="standard"
-                        />
-                        <TextField
-                            id="pos1"
-                            name="position1"
-                            label="Position/Title if applicable"
-                            values={values.position1}
-                            onChange={handleChange}
-                            variant="standard"
-                        />
-                        <TextField
-                            id="start1"
-                            name="start1"
-                            label="Start Ex: Jan 2022"
-                            values={values.start1}
-                            onChange={handleChange}
-                            variant="standard"
-                        />
-                        <TextField
-                            id="end1"
-                            name="end1"
-                            label="End Ex: Dec 2022 or Present"
-                            values={values.end1}
-                            onChange={handleChange}
-                            variant="standard"
-                        />
-                        <TextField
-                            id="description1"
-                            name="description1"
-                            label="Description"
-                            values={values.description1}
-                            multiline
-                            onChange={handleChange}
-                            variant="standard"
-                        />
-                    </FormControl>
-                    
-            
 
-            <FormControl sx={{ m: 3, width: '35ch' }} variant="standard">
+        <div className="Header">
+            <div class="left-arrow" onClick={() => navigate('/education')}> <FaArrowLeft /> </div>
+            <div className="Logo"><h1>Online Resume Builder</h1></div>
+            <div className="Header_text"><h1>Experiences</h1></div>
+        </div>
+        <div><h2>This is where you input past work experience. Since you selected the Engineering discipline, we suggest adding projects or research you participated in as well!</h2></div>
+            
+        <div className='selection_box'>
+            <Box sx={{ align: 'center'}}>
+            <FormControl sx={{ m: 3, width: '75ch' }} variant="standard">
+                <TextField
+                    id="exp1"
+                    name="experience1"
+                    label="Experience 1"
+                    values={values.experience1}
+                    onChange={handleChange}
+                    variant="standard"
+                />
+                <TextField
+                    id="pos1"
+                    name="position1"
+                    label="Position/Title if applicable"
+                    values={values.position1}
+                    onChange={handleChange}
+                    variant="standard"
+                />
+                <TextField
+                    id="start1"
+                    name="start1"
+                    label="Start Ex: Jan 2022"
+                    values={values.start1}
+                    onChange={handleChange}
+                    variant="standard"
+                />
+                <TextField
+                    id="end1"
+                    name="end1"
+                    label="End Ex: Dec 2022 or Present"
+                    values={values.end1}
+                    onChange={handleChange}
+                    variant="standard"
+                />
+                <TextField
+                    id="description1"
+                    name="description1"
+                    label="Description"
+                    values={values.description1}
+                    multiline
+                    onChange={handleChange}
+                    variant="standard"
+                />
+            </FormControl>
+            </Box>      
+        </div>
+        <div><h1></h1></div>
+        <div className='selection_box'>
+            <Box sx={{ align: 'center' }}>
+            <FormControl sx={{ m: 3, width: '75ch' }} variant="standard">
                 <TextField
                     id="exp2"
                     name="experience2"
@@ -137,8 +141,12 @@ const Page = () => {
                     variant="standard"
                 />
             </FormControl>
-
-            <FormControl sx={{ m: 3, width: '35ch' }} variant="standard">
+            </Box>
+        </div>
+        <div><h1></h1></div>
+        <div className='selection_box'>
+            <Box sx={{ align: 'center'}}>
+            <FormControl sx={{ m: 3, width: '75ch' }} variant="standard">
                 <TextField
                     id="exp3"
                     name="experience3"
@@ -181,9 +189,10 @@ const Page = () => {
                     variant="standard"
                 />
             </FormControl>
-            </div>
-                </Box>
-            <button style={{ width: "175px", height: "60px" }} onClick={() => {{(navigate('/design'))}}}>Design</button>
+            </Box>
+        </div>
+        <div><h1></h1></div>
+        <button style={{ width: "175px", height: "60px" }} onClick={() => {{(navigate('/design'))}}}>Design</button>
             {/* <button style={{ width: "175px", height: "60px" }} onClick={console.log(values)}>Test info</button> */}
         </div>
     );
