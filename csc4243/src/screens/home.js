@@ -1,5 +1,6 @@
 import { NavigationType, useNavigate } from "react-router-dom";
 import "../components/css/home.css";
+import logo from '../images/logo.png';
 
 const Page = () => {
     let navigate = useNavigate();
@@ -8,12 +9,12 @@ const Page = () => {
         <div className="home">
 
             <div className="header">
-            <img className='logo' src="../images/logo.png" alt="Online Resume"></img>
-            <div className="header_text"><h1>Home</h1></div>
+            <   img className='logo' src={logo} alt=""></img>
+                <div className="header_text"><h1>Home</h1></div>
             </div>
 
-            <h1>Before we get started, what industry/major do you classify under?</h1>
-            <select style={{ width: "175px", height: "50px" }} name="industry" id="industry">
+            <h2>Before we get started, what industry/major do you classify under?</h2>
+            <select style={{ width: "175px", height: "60px" }} name="industry" id="industry">
                 <option value="" disabled selected>Select Your Option</option>
                 <option value="engineering">Engineering</option>
                 <option value="sciences">Physical Sciences</option>
