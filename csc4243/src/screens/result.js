@@ -108,9 +108,7 @@ const Page = () => {
             
             <br />
             <hr></hr>
-            {/* <a href="../images/finished_resume.pdf" download>
-                <button style={{ width: "175px", height: "60px" }} onClick={() => null }>Download Resume</button>
-            </a> */}
+
             <button style={{ width: "175px", height: "60px" }} onClick={() => navigate('/home')}>Home</button>
 
         </div>

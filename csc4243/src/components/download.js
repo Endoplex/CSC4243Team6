@@ -10,7 +10,7 @@ const GenericPdfDownloader = ({rootElementId, downloadFileName}) => {
             .then((canvas) => {
                 const imgData = canvas.toDataURL('image/png');
                 const pdf = new jsPDF();
-                pdf.addImage(imgData, 'JPEG', 0, 0);
+                pdf.addImage(imgData, 'JPEG', -85, 0);
                 pdf.save(`${downloadFileName}.pdf`);
             })
     }
