@@ -1,0 +1,24 @@
+.personal-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin:auto;
+    max-width: 80vw;
+    
+}
+
+.education-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin:auto;
+    max-width: 80vw;
+}
+
+.experience-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin:auto;
+    max-width: 80vw;
+}
