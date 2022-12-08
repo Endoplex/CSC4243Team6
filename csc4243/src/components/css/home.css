@@ -1,10 +1,11 @@
 .home {
   text-align: center;
+  padding-top: 10rem;
 }
 
 .header  {
   background-color: rgb(39, 117, 69);
-  height: 5rem;
+  height: 10rem;
   width: 100%;
   margin: auto;
   position: fixed;
@@ -14,11 +15,12 @@
 }
 
 .logo {
-    height: 11rem;
-    width: 11rem;
-    background-color: #FCA311;
-    margin: 0 0 0 10px;
+    height: 10rem;
+    width: 10rem;
+    background-color: rgb(39, 117, 69);
+    margin: 0 0 0;
     display: inline-box;
+    line-height: 2rem;
     float: left;
   }
 
@@ -26,7 +28,8 @@
   display: inline-block;
   color: white;
   font-size: 25px;
+  padding-right: 10rem;
   margin-top: 0;
-  line-height: 1rem;
+  line-height: 5rem;
   vertical-align: middle;
 }

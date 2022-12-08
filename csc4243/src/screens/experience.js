@@ -34,6 +34,8 @@ const Page = () => {
 
     let navigate = useNavigate();
 
+    console.log(localStorage.getItem('experienceKey'));
+
     React.useEffect(() => {
         localStorage.setItem('experienceKey', JSON.stringify(values));
     }, [values]);
@@ -60,14 +62,17 @@ const Page = () => {
 
     return (
         <div className="Experience">
-
-        <div className="Header">
-            <div class="left-arrow" onClick={() => navigate('/education')}> <FaArrowLeft /> </div>
-            <div className="Logo"><h1>Online Resume Builder</h1></div>
-            <div className="Header_text"><h1>Experiences</h1></div>
-        </div>
-        <div><h2>This is where you input past work experience. Since you selected the Engineering discipline, we suggest adding projects or research you participated in as well!</h2></div>
-            
+            <div className="Header">
+                <div class="left-arrow" onClick={() => navigate('/education')}> <FaArrowLeft /> </div>
+                <div className="Logo"><h1>Online Resume Builder</h1></div>
+                <div className="Header_text"><h1>Experiences</h1></div>
+            </div>
+            {localStorage.getItem('experienceKey', JSON.stringify) == '{"industry":"engineering"}' && <div>This is where you input past work experience. Since you selected the Engineering discipline, we suggest adding projects or research you participated in as well!</div>}
+            {localStorage.getItem('experienceKey', JSON.stringify) == '{"industry":"physSciences"}' && <div>This is where you input past work experience. Since you selected the Physical Sciences discipline, we suggest adding lab experiences or research you participated in as well!</div>}
+            {localStorage.getItem('experienceKey', JSON.stringify) == '{"industry":"lifeSciences"}' && <div>This is where you input past work experience. Since you selected the Life Sciences discipline, we suggest adding lab research or paper publications you participated in as well!</div>}
+            {localStorage.getItem('experienceKey', JSON.stringify) == '{"industry":"humanities"}' && <div>This is where you input past work experience. Since you selected the Humanities discipline, we suggest adding papers or media you're proud of that you've done as well!</div>}
+            {localStorage.getItem('experienceKey', JSON.stringify) == '{"industry":"social"}' && <div>This is where you input past work experience. Since you selected the Social Sciences discipline, we suggest adding volunteering or service learning you participated in as well!</div>}
+            {localStorage.getItem('experienceKey', JSON.stringify) == '{"industry":"business"}' && <div>This is where you input past work experience. Since you selected the Business discipline, we suggest adding networking and communication skills you have as well!</div>}
         <div className='selection_box'>
             <Box sx={{ align: 'center'}}>
             <FormControl sx={{ m: 3, width: '75ch' }} variant="standard">
@@ -226,6 +231,8 @@ const Page = () => {
         <div><h1></h1></div>
         <button style={{ width: "175px", height: "60px" }} onClick={() => {{(navigate('/design'))}}}>Design</button>
             {/* <button style={{ width: "175px", height: "60px" }} onClick={console.log(values)}>Test info</button> */}
+
+            <div><h1></h1></div>
         </div>
     );
 }
