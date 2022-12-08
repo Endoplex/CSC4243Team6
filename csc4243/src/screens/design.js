@@ -11,6 +11,12 @@ import '../App.css';
 
 const DesignScreen = () => {
     let navigate = useNavigate();
+
+    function selectionStyle() {
+        document.getElementById('layouts').setAttribute("class", "selected");
+    }
+
+    //document.querySelector('#image').addEventListener('click', () => {document.querySelector('#selected').classList.add('selected')});
     
     return (
     <div class="design">
@@ -22,10 +28,10 @@ const DesignScreen = () => {
         <h3>Select a layout for your resume</h3>
         <div className="Design">
                 <div layouts>
-                    <img className="style" src={basic} alt="" tabIndex={1}/>
-                    <img className="style" src={professional} alt="" tabIndex={1}/>
+                    <input className="style" type="image" src={basic} tabIndex={1} />
+                    {/* <img className="style" src={professional} alt="" tabIndex={1}/>
                     <img className="style" src={green} alt="" tabIndex={1}/>
-                    <img className="style" src={silicon} alt="" tabIndex={1}/>
+                    <img className="style" src={silicon} alt="" tabIndex={1}/> */}
                 </div>
                 <br />
                 <button style={{ width: "175px", height: "60px" }} onClick={() => {{(navigate('/result'))}}}>Result</button>
