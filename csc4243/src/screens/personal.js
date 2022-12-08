@@ -23,6 +23,8 @@ const personalDefaultValues = {
 
 const Page = () => {
 
+    const homeJson = JSON.parse(localStorage.getItem('homeKey'));
+
     const [values, setValues] = React.useState(personalDefaultValues);
 
     const handleInputChange = (e) => {
@@ -37,7 +39,7 @@ const Page = () => {
     let navigate = useNavigate();
 
     let githubBlock;
-    if(localStorage.getItem('experienceKey', JSON.stringify) == '{"industry":"computerScience"}') {
+    if(homeJson.industry == "computerScience") {
         githubBlock = <TextField 
         id="githubInput" 
         name="github"

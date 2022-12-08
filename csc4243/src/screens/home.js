@@ -4,7 +4,8 @@ import "../components/css/home.css";
 import logo from '../images/logo.png';
 
 const homeDefaultValues = {
-    industry: ''
+    industry: '',
+    mode: ''
 }
 
 const Page = () => {
@@ -18,7 +19,7 @@ const Page = () => {
     };
 
     React.useEffect(() => {
-        localStorage.setItem('experienceKey', JSON.stringify(values));
+        localStorage.setItem('homeKey', JSON.stringify(values));
     }, [values]);
 
     return (
