@@ -25,7 +25,7 @@ const Page = () => {
         <div className="home">
 
             <div className="header">
-            <   img className='logo' src={logo} alt=""></img>
+                <img className='logo' src={logo} alt=""></img>
                 <div className="header_text"><h1>Home</h1></div>
             </div>
 
@@ -33,6 +33,7 @@ const Page = () => {
             <select style={{ width: "175px", height: "60px" }} name="industry" id="industry" onChange={handleChange}>
                 <option value="" disabled selected>Select Your Option</option>
                 <option value="engineering">Engineering</option>
+                <option value="computerScience">Computer Science</option>
                 <option value="physSciences">Physical Sciences</option>
                 <option value="lifeSciences">Life Sciences</option>
                 <option value="humanities">Humanities</option>
