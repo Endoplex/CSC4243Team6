@@ -60,6 +60,16 @@ const Page = () => {
         popup.classList.toggle("show");
     }
 
+    function exp3Help() {
+        var popup = document.getElementById("exp3Popup");
+        popup.classList.toggle("show");
+    }
+
+    function desc3Help() {
+        var popup = document.getElementById("desc3Popup");
+        popup.classList.toggle("show");
+    }
+
     return (
         <div className="Experience">
             <div className="Header">
@@ -76,16 +86,18 @@ const Page = () => {
         <div className='selection_box'>
             <Box sx={{ align: 'center'}}>
             <FormControl sx={{ m: 3, width: '75ch' }} variant="standard">
-                <TextField
-                    id="exp1"
-                    name="experience1"
-                    label="Experience 1"
-                    values={values.experience1}
-                    onChange={handleChange}
-                    variant="standard"
-                />
-                <div class="popup" onClick={() => exp1Help()}><FaQuestionCircle />
-                    <span class="popuptext" id="exp1Popup">The first experience you enter should be the name of what you want to show off the most. This could be a company you worked at, an interesting project, or even research that you've done.</span>
+                <div>
+                    <TextField
+                        id="exp1"
+                        name="experience1"
+                        label="Experience 1"
+                        values={values.experience1}
+                        onChange={handleChange}
+                        variant="standard"
+                    />
+                    <div class="popup" onClick={() => exp1Help()}><FaQuestionCircle />
+                        <span class="popuptext" id="exp1Popup">Your first experience should be the name of what you want to show off the most. This could be a company you worked at, interesting project, or research.</span>
+                    </div>
                 </div>
                 <TextField
                     id="pos1"
@@ -111,17 +123,19 @@ const Page = () => {
                     onChange={handleChange}
                     variant="standard"
                 />
-                <TextField
-                    id="description1"
-                    name="description1"
-                    label="Description"
-                    values={values.description1}
-                    multiline
-                    onChange={handleChange}
-                    variant="standard"
-                />
-                <div class="popup" onClick={() => desc1Help()}><FaQuestionCircle />
-                    <span class="popuptext" id="desc1Popup">Here, you should go into detail about the experience. Don't be afraid to brag if you think a particular aspect of the experience was interesting</span>
+                <div>
+                    <TextField
+                        id="description1"
+                        name="description1"
+                        label="Description"
+                        values={values.description1}
+                        multiline
+                        onChange={handleChange}
+                        variant="standard"
+                    />
+                    <div class="popup" onClick={() => desc1Help()}><FaQuestionCircle />
+                        <span class="popuptext" id="desc1Popup">Go into detail about the experience. Don't be afraid to brag if you think a particular aspect of the experience was interesting</span>
+                    </div>
                 </div>
             </FormControl>
             </Box>      
@@ -130,16 +144,18 @@ const Page = () => {
         <div className='selection_box'>
             <Box sx={{ align: 'center' }}>
             <FormControl sx={{ m: 3, width: '75ch' }} variant="standard">
-                <TextField
-                    id="exp2"
-                    name="experience2"
-                    label="Experience 2"
-                    values={values.experience2}
-                    onChange={handleChange}
-                    variant="standard"
-                />
-                <div class="popup" onClick={() => exp2Help()}><FaQuestionCircle />
-                    <span class="popuptext" id="exp2Popup">For the second experience, this could be either the next most interesting, or the next most recent</span>
+                <div>
+                    <TextField
+                        id="exp2"
+                        name="experience2"
+                        label="Experience 2"
+                        values={values.experience2}
+                        onChange={handleChange}
+                        variant="standard"
+                    />
+                    <div class="popup" onClick={() => exp2Help()}><FaQuestionCircle />
+                        <span class="popuptext" id="exp2Popup">For the second experience, this could be either the next most interesting, or the next most recent</span>
+                    </div>
                 </div>
                 <TextField
                     id="pos2"
@@ -165,17 +181,19 @@ const Page = () => {
                     onChange={handleChange}
                     variant="standard"
                 />
-                <TextField
-                    id="description2"
-                    name="description2"
-                    label="Description"
-                    values={values.description2}
-                    multiline
-                    onChange={handleChange}
-                    variant="standard"
-                />
-                <div class="popup" onClick={() => desc2Help()}><FaQuestionCircle />
-                    <span class="popuptext" id="desc2Popup"></span>
+                <div>
+                    <TextField
+                        id="description2"
+                        name="description2"
+                        label="Description"
+                        values={values.description2}
+                        multiline
+                        onChange={handleChange}
+                        variant="standard"
+                    />
+                    <div class="popup" onClick={() => desc2Help()}><FaQuestionCircle />
+                        <span class="popuptext" id="desc2Popup">Here, you should go into detail about the experience. Don't be afraid to brag if you think a particular aspect of the experience was interesting</span>
+                    </div>
                 </div>
             </FormControl>
             </Box>
@@ -184,14 +202,19 @@ const Page = () => {
         <div className='selection_box'>
             <Box sx={{ align: 'center'}}>
             <FormControl sx={{ m: 3, width: '75ch' }} variant="standard">
-                <TextField
-                    id="exp3"
-                    name="experience3"
-                    label="Experience 3"
-                    values={values.experience3}
-                    onChange={handleChange}
-                    variant="standard"
-                />
+                <div>
+                    <TextField
+                        id="exp3"
+                        name="experience3"
+                        label="Experience 3"
+                        values={values.experience3}
+                        onChange={handleChange}
+                        variant="standard"
+                    />
+                    <div class="popup" onClick={() => exp3Help()}><FaQuestionCircle />
+                        <span class="popuptext" id="exp3Popup">Make sure to stay in chronological order; if you have any more experiences, show them off!</span>
+                    </div>
+                </div>
                 <TextField
                     id="pos3"
                     name="position3"
@@ -216,15 +239,20 @@ const Page = () => {
                     onChange={handleChange}
                     variant="standard"
                 />
-                <TextField
-                    id="description3"
-                    name="description3"
-                    label="Description"
-                    values={values.description3}
-                    multiline
-                    onChange={handleChange}
-                    variant="standard"
-                />
+                <div>
+                    <TextField
+                        id="description3"
+                        name="description3"
+                        label="Description"
+                        values={values.description3}
+                        multiline
+                        onChange={handleChange}
+                        variant="standard"
+                    />
+                    <div class="popup" onClick={() => desc3Help()}><FaQuestionCircle />
+                        <span class="popuptext" id="desc3Popup">Here, you should go into detail about the experience. Don't be afraid to brag if you think a particular aspect of the experience was interesting</span>
+                    </div>
+                </div>
             </FormControl>
             </Box>
         </div>
