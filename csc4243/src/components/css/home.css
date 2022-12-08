@@ -24,6 +24,10 @@
     float: left;
   }
 
+.logo:hover {
+    cursor: pointer;
+}
+
 .header_text {
   display: inline-block;
   color: white;

@@ -5,6 +5,9 @@
     position: relative;
 }
 
+.style:hover {
+  cursor: pointer;
+}
 
 .design {
     text-align: center;
@@ -49,4 +52,8 @@
     height: 340px;
     background: blue;
     position: absolute;
+  }
+
+  .rectangle:hover {
+    cursor: pointer;
   }

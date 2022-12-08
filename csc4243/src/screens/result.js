@@ -2,9 +2,14 @@ import { NavigationType, useNavigate } from "react-router-dom";
 import resume from '../images/finished_resume.png';
 import { FaQuestionCircle, FaArrowLeft } from "react-icons/fa";
 import '../components/css/result.css';
+import logo from '../images/logo.png';
 
 const Page = () => {
     let navigate = useNavigate();
+
+    const handleClick = event => {
+        navigate('/home')
+    };
 
     const personalJson = JSON.parse(localStorage.getItem('personalKey'));
     const experienceJson = JSON.parse(localStorage.getItem('experienceKey'));
@@ -12,79 +17,93 @@ const Page = () => {
 
     return (
         <div className = "result">
-            <div className="Header">
-                <div class="left-arrow" onClick={() => navigate('/design')}> <FaArrowLeft /> </div>
-                <div className="Logo"><h1>Online Resume Builder</h1></div>
-                <div className="Header_text"><h1>Your Resume</h1></div>
+
+            <div className="header">
+                <img className='logo' src={logo} alt="" onClick={handleClick}></img>
+                <div className="header_text"><h1>Final Document</h1></div>
             </div>
-            {/* <img src={resume} alt="" /> */}
-
-            <div className="personal-box">
-                <p>{personalJson.name}</p>
-                <p>{personalJson.personalphone}</p>
-                <p>{personalJson.email}</p>
-                <p>{personalJson.linkedin}</p>
-                <p>{personalJson.streetname}</p>
-                <p>{personalJson.city}</p>
-                <p>{personalJson.state}</p>
-                <p>{personalJson.zip}</p>
-                <p>{personalJson.country}</p>
-                <p>{personalJson.extraaddres}</p>
+            <div className='selection_box'>
+            <div>
+                <div className="name">{personalJson.name}</div>
+                <div className="personinfo">{personalJson.city}, {personalJson.state} | {personalJson.personalphone} | {personalJson.email}</div>
+                <div className="website"><a href={personalJson.linkedin} target="_blank">{personalJson.linkedin}</a></div>
             </div>
+            
+            <div className="miniheader">Education</div>
+            <hr style={{ borderTop: "4px solid black" }}></hr>
 
-            <hr></hr>
-
-            <div className="education-box">
-                <p>{educationJson.school}</p>
-                <p>{educationJson.major}</p>
-                <p>{educationJson.degree}</p>
-                <p>{educationJson.GPA}</p>
-                <p>{educationJson.month} {educationJson.year}</p>
+            <div>
+                <p className="school">{educationJson.school}
+                <span className="graddate">{educationJson.month} {educationJson.year}</span>
+                </p>
+                <p className="major">{educationJson.major} {educationJson.degree}
+                <span className="gpa">GPA: {educationJson.GPA}</span>
+                </p>
             </div>
 
-            <hr></hr>
+            <div className="miniheader">Experience</div>
+            <hr style={{ borderTop: "4px solid black" }}></hr>
 
-            <div className="experience-box">
-                <p>{experienceJson.experience1}</p>
-                <p>{experienceJson.position1}</p>
-                {experienceJson.start1 != "" && <p>{experienceJson.start1} to {experienceJson.end1}</p>}
-                <p>{experienceJson.description1}</p>
+            <div>
+                <p className="place">{experienceJson.experience1}
+                {experienceJson.start1 != "" && <span className="worktime">{experienceJson.start1} - {experienceJson.end1}</span>}
+                </p>
+                <p className="position">{experienceJson.position1}</p>
+                <p className="workstuff">{experienceJson.description1}</p>
             </div>
 
-            <div className="experience-box">
-                <p>{experienceJson.experience2}</p>
-                <p>{experienceJson.position2}</p>
-                {experienceJson.start2 != "" && <p>{experienceJson.start2} to {experienceJson.end2}</p>}
-                <p>{experienceJson.description2}</p>
+            <div><h1></h1></div>
+
+            <div>
+                <p className="place">{experienceJson.experience2}
+                {experienceJson.start2 != "" && <span className="worktime">{experienceJson.start2} - {experienceJson.end2}</span>}
+                </p>
+                <p className="position">{experienceJson.position2}</p>
+                <p className="workstuff">{experienceJson.description2}</p>
             </div>
 
-            <div className="experience-box">
-                <p>{experienceJson.experience3}</p>
-                <p>{experienceJson.position3}</p>
-                {experienceJson.start3 != "" && <p>{experienceJson.start3} to {experienceJson.end3}</p>}
-                <p>{experienceJson.description3}</p>
+            <div><h1></h1></div>
+
+           <div>
+                <p className="place">{experienceJson.experience3}
+                {experienceJson.start3 != "" && <span className="worktime">{experienceJson.start3} - {experienceJson.end3}</span>}
+                </p>
+                <p className="position">{experienceJson.position3}</p>
+                <p className="workstuff">{experienceJson.description3}</p>
             </div>
 
-            <div className="experience-box">
-                <p>{experienceJson.experience4}</p>
-                <p>{experienceJson.position4}</p>
-                {experienceJson.start4 != "" && <p>{experienceJson.start4} to {experienceJson.end4}</p>}
-                <p>{experienceJson.description4}</p>
+            <div><h1></h1></div>
+
+            <div>
+                <p className="place">{experienceJson.experience4}
+                {experienceJson.start4 != "" && <span className="worktime">{experienceJson.start4} - {experienceJson.end4}</span>}
+                </p>
+                <p className="position">{experienceJson.position4}</p>
+                <p className="workstuff">{experienceJson.description4}</p>
             </div>
 
-            <div className="experience-box">
-                <p>{experienceJson.experience5}</p>
-                <p>{experienceJson.position5}</p>
-                {experienceJson.start5 != "" && <p>{experienceJson.start5} to {experienceJson.end5}</p>}
-                <p>{experienceJson.description5}</p>
+            <div><h1></h1></div>
+
+            <div>
+                <p className="place">{experienceJson.experience5}
+                {experienceJson.start5 != "" && <span className="worktime">{experienceJson.start5} - {experienceJson.end5}</span>}
+                </p>
+                <p className="position">{experienceJson.position5}</p>
+                <p className="workstuff">{experienceJson.description5}</p>
+            </div>
+
+            <div><h1></h1></div>
+
             </div>
 
             
             <br />
             <hr></hr>
-            <a href="../images/finished_resume.pdf" download>
+            {/* <a href="../images/finished_resume.pdf" download>
                 <button style={{ width: "175px", height: "60px" }} onClick={() => null }>Download Resume</button>
-            </a>
+            </a> */}
+            <button style={{ width: "175px", height: "60px" }} onClick={() => navigate('/home')}>Home</button>
+
         </div>
     );
 }
