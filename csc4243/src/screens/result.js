@@ -32,6 +32,8 @@ const Page = () => {
                 <p>{personalJson.extraaddres}</p>
             </div>
 
+            <hr></hr>
+
             <div className="education-box">
                 <p>{educationJson.school}</p>
                 <p>{educationJson.major}</p>
@@ -39,6 +41,8 @@ const Page = () => {
                 <p>{educationJson.GPA}</p>
                 <p>{educationJson.month} {educationJson.year}</p>
             </div>
+
+            <hr></hr>
 
             <div className="experience-box">
                 <p>{experienceJson.experience1}</p>
