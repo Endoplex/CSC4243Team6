@@ -47,7 +47,8 @@
 
   .rectangle {
     display: inline-block;
-    padding-top: 5px;
+    padding-top: 10px;
+    padding-left: 5px;
     width: 275px;
     height: 340px;
     background: blue;
