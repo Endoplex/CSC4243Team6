@@ -34,7 +34,7 @@ const DesignScreen = () => {
                     <img className="style" src={silicon} alt="" tabIndex={1}/> */}
                 </div>
                 <br />
-                <button style={{ width: "175px", height: "60px" }} onClick={() => {{(navigate('/result'))}}}>Result</button>
+                <button style={{ width: "175px", height: "60px" }} onClick={() => {{(navigate('/result'))}}}>To Result</button>
             </div>
     </div>
     );
