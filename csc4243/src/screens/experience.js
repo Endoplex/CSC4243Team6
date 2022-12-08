@@ -82,7 +82,7 @@ const Page = () => {
     let extraExper1;
     let extraExper2;
 
-    if(count >= 2) {
+    if(count >= 1) {
         extraExper1 = <div className='selection_box'>
         <Box sx={{ align: 'center' }}>
         <FormControl sx={{ m: 3, width: '75ch' }} variant="standard">
@@ -142,7 +142,7 @@ const Page = () => {
     </div>
     }
 
-    if(count >= 3) {
+    if(count >= 2) {
         extraExper2 = <div className='selection_box'>
         <Box sx={{ align: 'center'}}>
         <FormControl sx={{ m: 3, width: '75ch' }} variant="standard">
@@ -202,7 +202,7 @@ const Page = () => {
     </div>
     }
 
-    if(count < 3) {
+    if(count < 2) {
         addbutton = <button className="control__btn" onClick={increase}>+</button>
     }
 
