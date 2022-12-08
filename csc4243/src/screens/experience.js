@@ -124,11 +124,12 @@ const Page = () => {
         extraExper1 = <div className='selection_box'>
         <Box sx={{ align: 'center' }}>
         <FormControl sx={{ m: 3, width: '75ch' }} variant="standard">
+            <h1>Experience 2</h1>
             <div>
                 <TextField
                     id="exp2"
                     name="experience2"
-                    label="Experience 2"
+                    label="Workplace"
                     values={values.experience2}
                     onChange={handleChange}
                     variant="standard"
@@ -184,11 +185,12 @@ const Page = () => {
         extraExper2 = <div className='selection_box'>
         <Box sx={{ align: 'center'}}>
         <FormControl sx={{ m: 3, width: '75ch' }} variant="standard">
+        <h1>Experience 3</h1>
             <div>
                 <TextField
                     id="exp3"
                     name="experience3"
-                    label="Experience 3"
+                    label="Workplace"
                     values={values.experience3}
                     onChange={handleChange}
                     variant="standard"
@@ -244,11 +246,12 @@ const Page = () => {
         extraExper3 = <div className='selection_box'>
         <Box sx={{ align: 'center'}}>
         <FormControl sx={{ m: 3, width: '75ch' }} variant="standard">
+        <h1>Experience 4</h1>
             <div>
                 <TextField
                     id="exp4"
                     name="experience4"
-                    label="Experience 4"
+                    label="Workplace"
                     values={values.experience4}
                     onChange={handleChange}
                     variant="standard"
@@ -304,11 +307,12 @@ const Page = () => {
         extraExper4 = <div className='selection_box'>
         <Box sx={{ align: 'center'}}>
         <FormControl sx={{ m: 3, width: '75ch' }} variant="standard">
+        <h1>Experience 5</h1>
             <div>
                 <TextField
                     id="exp5"
                     name="experience5"
-                    label="Experience 5"
+                    label="Workplace"
                     values={values.experience5}
                     onChange={handleChange}
                     variant="standard"
@@ -380,23 +384,24 @@ const Page = () => {
             </div>
 
             <div><h1></h1></div>
-            {homeJson.industry == 'engineering' && <div><strong>This is where you input past work experience. Since you selected the Engineering discipline, we suggest adding projects or research you participated in as well!</strong></div>}
-            {homeJson.industry == 'physSciences' && <div><strong>This is where you input past work experience. Since you selected the Physical Sciences discipline, we suggest adding lab experiences or research you participated in as well!</strong></div>}
-            {homeJson.industry == 'lifeSciences' && <div><strong>This is where you input past work experience. Since you selected the Life Sciences discipline, we suggest adding lab research or paper publications you participated in as well!</strong></div>}
-            {homeJson.industry == 'humanities' && <div><strong>This is where you input past work experience. Since you selected the Humanities discipline, we suggest adding papers or media you're proud of that you've done as well!</strong></div>}
-            {homeJson.industry == 'social' && <div><strong>This is where you input past work experience. Since you selected the Social Sciences discipline, we suggest adding volunteering or service learning you participated in as well!</strong></div>}
-            {homeJson.industry == 'business' && <div><strong>This is where you input past work experience. Since you selected the Business discipline, we suggest adding networking and communication skills you have as well!</strong></div>}
+            {homeJson.industry == 'engineering' && <div className="detail"><strong>This is where you input past work experience. Since you selected the Engineering discipline, we suggest adding projects or research you participated in as well!</strong></div>}
+            {homeJson.industry == 'physSciences' && <div className="detail"><strong>This is where you input past work experience. Since you selected the Physical Sciences discipline, we suggest adding lab experiences or research you participated in as well!</strong></div>}
+            {homeJson.industry == 'lifeSciences' && <div className="detail"><strong>This is where you input past work experience. Since you selected the Life Sciences discipline, we suggest adding lab research or paper publications you participated in as well!</strong></div>}
+            {homeJson.industry == 'humanities' && <div className="detail"><strong>This is where you input past work experience. Since you selected the Humanities discipline, we suggest adding papers or media you're proud of that you've done as well!</strong></div>}
+            {homeJson.industry == 'social' && <div className="detail"><strong>This is where you input past work experience. Since you selected the Social Sciences discipline, we suggest adding volunteering or service learning you participated in as well!</strong></div>}
+            {homeJson.industry == 'business' && <div className="detail"><strong>This is where you input past work experience. Since you selected the Business discipline, we suggest adding networking and communication skills you have as well!</strong></div>}
 
-            {localStorage.getItem('mode') == 'resume' && <div><strong>Also, since you're making a resume, we've given you a maximum of 3 experiences so you can focus on perfecting them!</strong></div>}
-            {localStorage.getItem('mode') == 'cv' && <div><strong>Also, since you're making a CV, we've given you a maximum of 5 experiences so you can add more detail!</strong></div>}
+            {localStorage.getItem('mode') == 'resume' && <div className="detail"><strong>Also, since you're making a resume, we've given you a maximum of 3 experiences so you can focus on perfecting them!</strong></div>}
+            {localStorage.getItem('mode') == 'cv' && <div className="detail"><strong>Also, since you're making a CV, we've given you a maximum of 5 experiences so you can add more detail!</strong></div>}
         <div className='selection_box'>
             <Box sx={{ align: 'center'}}>
             <FormControl sx={{ m: 3, width: '75ch' }} variant="standard">
+                <h1>Experience 1</h1>
                 <div>
                     <TextField
                         id="exp1"
                         name="experience1"
-                        label="Experience 1"
+                        label="Workplace"
                         values={values.experience1}
                         onChange={handleChange}
                         variant="standard"

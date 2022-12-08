@@ -20,6 +20,17 @@
   align-items: center;
 }
 
+#description4 {
+  min-width: 60vh;
+  align-items: center;
+}
+
+#description5 {
+  min-width: 60vh;
+  align-items: center;
+}
+
+
 .experience {
     text-align: center;
     padding-top: 10rem;
@@ -57,5 +68,9 @@
   }
 
 .popup {
-  z-index: 11;
+
+}
+
+.detail {
+  font-size: 18px;
 }
