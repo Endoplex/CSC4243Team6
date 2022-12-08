@@ -47,6 +47,10 @@ const Page = () => {
         setCount(count => count + 1);
       };
 
+      const handleClick = event => {
+        navigate('/home')
+    };
+
     const handleChange = (e) => {
         const {name, value} = e.target;
         setValues({ ...values, [name]: e.target.value });
@@ -371,7 +375,7 @@ const Page = () => {
     return (
         <div className="experience">
             <div className="header">
-                <img className='logo' src={logo} alt=""></img>
+                <img className='logo' src={logo} alt="" onClick={handleClick}></img>
                 <div className="header_text"><h1>Experience</h1></div>
             </div>
 

@@ -27,6 +27,10 @@ const Page = () => {
 
     const [values, setValues] = React.useState(personalDefaultValues);
 
+    const handleClick = event => {
+        navigate('/home')
+    };
+
     const handleInputChange = (e) => {
         const {name, value} = e.target;
         setValues({ ...values, [name]: e.target.value });
@@ -53,7 +57,7 @@ const Page = () => {
     return (
         <div className = "personal">
             <div className="header">
-                <img className='logo' src={logo} alt=""></img>
+                <img className='logo' src={logo} alt="" onClick={handleClick}></img>
                 <div className="header_text"><h1>Personal Information</h1></div>
             </div>
 

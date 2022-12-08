@@ -22,6 +22,10 @@ const Page = () => {
 
     const [values, setValues] = React.useState(educationDefaultValues);
 
+    const handleClick = event => {
+        navigate('/home');
+    };
+
     const handleChange = (e) => {
         const{name, value} = e.target;
         setValues({ ...values, [name]: e.target.value });
@@ -54,7 +58,7 @@ const Page = () => {
     return (
         <div className="education">
             <div className="header">
-                <img className='logo' src={logo} alt=""></img>
+                <img className='logo' src={logo} alt="" onClick={handleClick}></img>
                 <div className="header_text"><h1>Education Information</h1></div>
             </div>
             <h1>Please fill out your up-to-date education information to open your resume!</h1>

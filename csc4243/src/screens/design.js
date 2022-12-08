@@ -23,6 +23,10 @@ const DesignScreen = () => {
         }
     };
 
+    const handleHomeClick = event => {
+        navigate('/home')
+    };
+
     let select = <img className="style" src={basic} onClick={handleClick}/>;
     if(count == 1) {
         select = <div className="parent"><div className="rectangle"/><img className="style" src={basic} onClick={handleClick}/></div>;
@@ -31,7 +35,7 @@ const DesignScreen = () => {
     return (
     <div className="design">
         <div className="header">
-            <img className='logo' src={logo} alt=""></img>
+            <img className='logo' src={logo} alt="" onClick={handleHomeClick}></img>
             <div className="header_text"><h1>Design</h1></div>
         </div>
         <h3>Select a layout for your resume</h3>
