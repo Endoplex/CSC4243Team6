@@ -1,3 +1,32 @@
 .home {
-    text-align: center;
+  text-align: center;
+}
+
+.header  {
+  background-color: rgb(39, 117, 69);
+  height: 5rem;
+  width: 100%;
+  margin: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.logo {
+    height: 11rem;
+    width: 11rem;
+    background-color: #FCA311;
+    margin: 0 0 0 10px;
+    display: inline-box;
+    float: left;
+  }
+
+.header_text {
+  display: inline-block;
+  color: white;
+  font-size: 25px;
+  margin-top: 0;
+  line-height: 1rem;
+  vertical-align: middle;
 }

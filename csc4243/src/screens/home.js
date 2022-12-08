@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { NavigationType, useNavigate } from "react-router-dom";
 import "../components/css/home.css";
-import '../App.css';
 
 const homeDefaultValues = {
     industry: ''
@@ -22,11 +21,13 @@ const Page = () => {
       }, [values]);
 
     return (
-        <div class="home">
-            <div className="Header">
-                <div className="Logo"><h1>Online Resume Builder</h1></div>
-                <div className="Header_text"><h1>Home</h1></div>
+        <div className="home">
+
+            <div className="header">
+            <img className='logo' src="../images/logo.png" alt="Online Resume"></img>
+            <div className="header_text"><h1>Home</h1></div>
             </div>
+
             <h1>Before we get started, what industry/major do you classify under?</h1>
             <select style={{ width: "175px", height: "50px" }} name="industry" id="industry" onChange={handleChange}>
                 <option value="" disabled selected>Select Your Option</option>
