@@ -33,3 +33,10 @@
     line-height: 5rem;
     vertical-align: middle;
   }
+
+  .selection_box {
+    background-color: #E5E5E5;
+    border-radius: 1rem;
+    width: 90%;
+    margin: auto;
+  }
