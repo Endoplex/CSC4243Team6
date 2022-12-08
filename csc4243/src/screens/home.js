@@ -19,7 +19,7 @@ const Page = () => {
 
     React.useEffect(() => {
         localStorage.setItem('experienceKey', JSON.stringify(values));
-      }, [values]);
+    }, [values]);
 
     return (
         <div className="home">
@@ -30,7 +30,7 @@ const Page = () => {
             </div>
 
             <h2>Before we get started, what industry/major do you classify under?</h2>
-            <select style={{ width: "175px", height: "60px" }} name="industry" id="industry">
+            <select style={{ width: "175px", height: "60px" }} name="industry" id="industry" onChange={handleChange}>
                 <option value="" disabled selected>Select Your Option</option>
                 <option value="engineering">Engineering</option>
                 <option value="physSciences">Physical Sciences</option>
