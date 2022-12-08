@@ -39,6 +39,18 @@ const Page = () => {
 
     let navigate = useNavigate();
 
+    let githubBlock;
+    if(localStorage.getItem('experienceKey', JSON.stringify) == '{"industry":"computerScience}') {
+        githubBlock = <TextField 
+        id="githubInput" 
+        name="github"
+        label="Github" 
+        values={values.github}
+        onChange={handleInputChange}
+        variant="standard" 
+    />
+    }
+
     return (
         <div className = "personal">
             <div className="header">
@@ -84,14 +96,7 @@ const Page = () => {
                         onChange={handleInputChange}
                         variant="standard"
                     />
-                    <TextField 
-                        id="githubInput" 
-                        name="github"
-                        label="Github" 
-                        values={values.github}
-                        onChange={handleInputChange}
-                        variant="standard" 
-                    />
+                    {githubBlock}
                 </FormControl>
                 </Box>
             </div>
@@ -157,6 +162,8 @@ const Page = () => {
             
             <button style={{ width: "175px", height: "60px" }} onClick={() => {{(navigate('/education'))}}}>To Education</button>
             {/* <button style={{ width: "175px", height: "60px" }} onClick={console.log(values)}>Test info</button> */}
+
+            <div><h1></h1></div>
         </div>
     );
 };

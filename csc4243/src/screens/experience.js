@@ -199,6 +199,8 @@ const Page = () => {
         <div><h1></h1></div>
         <button style={{ width: "175px", height: "60px" }} onClick={() => {{(navigate('/design'))}}}>Design</button>
             {/* <button style={{ width: "175px", height: "60px" }} onClick={console.log(values)}>Test info</button> */}
+
+            <div><h1></h1></div>
         </div>
     );
 }
