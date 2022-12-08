@@ -1,8 +1,10 @@
+import React from 'react';
 import { NavigationType, useNavigate } from "react-router-dom";
 import resume from '../images/finished_resume.png';
 import { FaQuestionCircle, FaArrowLeft } from "react-icons/fa";
 import '../components/css/result.css';
 import logo from '../images/logo.png';
+import GenericPdfDownloader from "../components/download";
 
 const Page = () => {
     let navigate = useNavigate();
@@ -16,12 +18,17 @@ const Page = () => {
     const educationJson = JSON.parse(localStorage.getItem('educationKey'));
 
     return (
+        <>
+
         <div className = "result">
 
             <div className="header">
                 <img className='logo' src={logo} alt="" onClick={handleClick}></img>
                 <div className="header_text"><h1>Final Document</h1></div>
             </div>
+
+            <div id="resume">
+
             <div className='selection_box'>
             <div>
                 <div className="name">{personalJson.name}</div>
@@ -96,6 +103,8 @@ const Page = () => {
 
             </div>
 
+            </div>
+
             
             <br />
             <hr></hr>
@@ -105,6 +114,14 @@ const Page = () => {
             <button style={{ width: "175px", height: "60px" }} onClick={() => navigate('/home')}>Home</button>
 
         </div>
+
+        <GenericPdfDownloader 
+            rootElementId="resume"
+            downloadFileName="resume" 
+        />            
+
+        </>
+        
     );
 }
 
