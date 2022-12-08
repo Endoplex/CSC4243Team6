@@ -40,7 +40,7 @@ const Page = () => {
     let navigate = useNavigate();
 
     let githubBlock;
-    if(localStorage.getItem('experienceKey', JSON.stringify) == '{"industry":"computerScience}') {
+    if(localStorage.getItem('experienceKey', JSON.stringify) == '{"industry":"computerScience"}') {
         githubBlock = <TextField 
         id="githubInput" 
         name="github"
@@ -62,7 +62,7 @@ const Page = () => {
             <div className='selection_box'>
                 <Box sx={{ align: 'center'}}>
                 <FormControl sx={{ m: 3, width: '75ch' }} variant="standard">
-                    <h1>Contant Info</h1>
+                    <h1>Contact Info</h1>
                     <TextField
                         id="fullNameInput"
                         name = "name"
