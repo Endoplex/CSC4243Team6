@@ -390,6 +390,7 @@ const Page = () => {
             {homeJson.industry == 'humanities' && <div className="detail"><strong>This is where you input past work experience. Since you selected the Humanities discipline, we suggest adding papers or media you're proud of that you've done as well!</strong></div>}
             {homeJson.industry == 'social' && <div className="detail"><strong>This is where you input past work experience. Since you selected the Social Sciences discipline, we suggest adding volunteering or service learning you participated in as well!</strong></div>}
             {homeJson.industry == 'business' && <div className="detail"><strong>This is where you input past work experience. Since you selected the Business discipline, we suggest adding networking and communication skills you have as well!</strong></div>}
+            {homeJson.industry == 'computerScience' && <div className="detail"><strong>This is where you input past work experience. Since you selected the Computer Science discipline, we suggest adding personal projects or internships especially!</strong></div>}
 
             {localStorage.getItem('mode') == 'resume' && <div className="detail"><strong>Also, since you're making a resume, we've given you a maximum of 3 experiences so you can focus on perfecting them!</strong></div>}
             {localStorage.getItem('mode') == 'cv' && <div className="detail"><strong>Also, since you're making a CV, we've given you a maximum of 5 experiences so you can add more detail!</strong></div>}
