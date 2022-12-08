@@ -23,9 +23,21 @@ const expDefaultValues = {
     position3: '',
     start3: '',
     end3: '',
-    description3: ''
+    description3: '',
+    experience4: '',
+    position4: '',
+    start4: '',
+    end4: '',
+    description4: '',
+    experience5: '',
+    position5: '',
+    start5: '',
+    end5: '',
+    description5: '',
 }
 const Page = () => {
+
+    const homeJson = JSON.parse(localStorage.getItem('homeKey'));
 
     const [values, setValues] = React.useState(expDefaultValues);
 
@@ -78,9 +90,31 @@ const Page = () => {
         popup.classList.toggle("show");
     }
 
+    function exp4Help() {
+        var popup = document.getElementById("exp4Popup");
+        popup.classList.toggle("show");
+    }
+
+    function desc4Help() {
+        var popup = document.getElementById("desc4Popup");
+        popup.classList.toggle("show");
+    }
+
+    function exp5Help() {
+        var popup = document.getElementById("exp5Popup");
+        popup.classList.toggle("show");
+    }
+
+    function desc5Help() {
+        var popup = document.getElementById("desc5Popup");
+        popup.classList.toggle("show");
+    }
+
     let addbutton;
     let extraExper1;
     let extraExper2;
+    let extraExper3;
+    let extraExper4;
 
     if(count >= 1) {
         extraExper1 = <div className='selection_box'>
@@ -202,8 +236,135 @@ const Page = () => {
     </div>
     }
 
-    if(count < 2) {
-        addbutton = <button className="control__btn" onClick={increase}>+</button>
+    if(count >= 3) {
+        extraExper3 = <div className='selection_box'>
+        <Box sx={{ align: 'center'}}>
+        <FormControl sx={{ m: 3, width: '75ch' }} variant="standard">
+            <div>
+                <TextField
+                    id="exp4"
+                    name="experience4"
+                    label="Experience 4"
+                    values={values.experience4}
+                    onChange={handleChange}
+                    variant="standard"
+                />
+                <div class="popup" onClick={() => exp4Help()}><FaQuestionCircle />
+                    <span class="popuptext" id="exp4Popup">Since you're making a CV, we'll give you more experience options!</span>
+                </div>
+            </div>
+            <TextField
+                id="pos4"
+                name="position4"
+                label="Position/Title if applicable"
+                values={values.position4}
+                onChange={handleChange}
+                variant="standard"
+            />
+            <TextField
+                id="start4"
+                name="start4"
+                label="Start Ex: Jan 2022"
+                values={values.start4}
+                onChange={handleChange}
+                variant="standard"
+            />
+            <TextField
+                id="end4"
+                name="end4"
+                label="End Ex: Dec 2022 or Present"
+                values={values.end4}
+                onChange={handleChange}
+                variant="standard"
+            />
+            <div>
+                <TextField
+                    id="description4"
+                    name="description4"
+                    label="Description"
+                    values={values.description4}
+                    multiline
+                    onChange={handleChange}
+                    variant="standard"
+                />
+                <div class="popup" onClick={() => desc4Help()}><FaQuestionCircle />
+                    <span class="popuptext" id="desc3Popup">Here, you should go into detail about the experience. Don't be afraid to brag if you think a particular aspect of the experience was interesting</span>
+                </div>
+            </div>
+        </FormControl>
+        </Box>
+    </div>
+    }
+
+    if(count >= 4) {
+        extraExper4 = <div className='selection_box'>
+        <Box sx={{ align: 'center'}}>
+        <FormControl sx={{ m: 3, width: '75ch' }} variant="standard">
+            <div>
+                <TextField
+                    id="exp5"
+                    name="experience5"
+                    label="Experience 5"
+                    values={values.experience5}
+                    onChange={handleChange}
+                    variant="standard"
+                />
+                <div class="popup" onClick={() => exp5Help()}><FaQuestionCircle />
+                    <span class="popuptext" id="exp5Popup">Make sure to stay in chronological order; if you have any more experiences, show them off!</span>
+                </div>
+            </div>
+            <TextField
+                id="pos5"
+                name="position5"
+                label="Position/Title if applicable"
+                values={values.position5}
+                onChange={handleChange}
+                variant="standard"
+            />
+            <TextField
+                id="start5"
+                name="start5"
+                label="Start Ex: Jan 2022"
+                values={values.start5}
+                onChange={handleChange}
+                variant="standard"
+            />
+            <TextField
+                id="end5"
+                name="end5"
+                label="End Ex: Dec 2022 or Present"
+                values={values.end5}
+                onChange={handleChange}
+                variant="standard"
+            />
+            <div>
+                <TextField
+                    id="description5"
+                    name="description5"
+                    label="Description"
+                    values={values.description5}
+                    multiline
+                    onChange={handleChange}
+                    variant="standard"
+                />
+                <div class="popup" onClick={() => desc5Help()}><FaQuestionCircle />
+                    <span class="popuptext" id="desc5Popup">Here, you should go into detail about the experience. Don't be afraid to brag if you think a particular aspect of the experience was interesting</span>
+                </div>
+            </div>
+        </FormControl>
+        </Box>
+    </div>
+    }
+
+    if (localStorage.getItem('mode') == 'resume') {
+        if (count < 2) {
+            addbutton = <button className="control__btn" onClick={increase}>+</button>
+        }
+    }
+    else if (localStorage.getItem('mode') == 'cv') {
+        if (count < 4) {
+            addbutton = <button className="control__btn" onClick={increase}>+</button>
+        }
     }
 
 
@@ -215,12 +376,15 @@ const Page = () => {
             </div>
 
             <div><h1></h1></div>
-            {localStorage.getItem('experienceKey', JSON.stringify) == '{"industry":"engineering"}' && <div><strong>This is where you input past work experience. Since you selected the Engineering discipline, we suggest adding projects or research you participated in as well!</strong></div>}
-            {localStorage.getItem('experienceKey', JSON.stringify) == '{"industry":"physSciences"}' && <div><strong>This is where you input past work experience. Since you selected the Physical Sciences discipline, we suggest adding lab experiences or research you participated in as well!</strong></div>}
-            {localStorage.getItem('experienceKey', JSON.stringify) == '{"industry":"lifeSciences"}' && <div><strong>This is where you input past work experience. Since you selected the Life Sciences discipline, we suggest adding lab research or paper publications you participated in as well!</strong></div>}
-            {localStorage.getItem('experienceKey', JSON.stringify) == '{"industry":"humanities"}' && <div><strong>This is where you input past work experience. Since you selected the Humanities discipline, we suggest adding papers or media you're proud of that you've done as well!</strong></div>}
-            {localStorage.getItem('experienceKey', JSON.stringify) == '{"industry":"social"}' && <div><strong>This is where you input past work experience. Since you selected the Social Sciences discipline, we suggest adding volunteering or service learning you participated in as well!</strong></div>}
-            {localStorage.getItem('experienceKey', JSON.stringify) == '{"industry":"business"}' && <div><strong>This is where you input past work experience. Since you selected the Business discipline, we suggest adding networking and communication skills you have as well!</strong></div>}
+            {homeJson.industry == 'engineering' && <div><strong>This is where you input past work experience. Since you selected the Engineering discipline, we suggest adding projects or research you participated in as well!</strong></div>}
+            {homeJson.industry == 'physSciences' && <div><strong>This is where you input past work experience. Since you selected the Physical Sciences discipline, we suggest adding lab experiences or research you participated in as well!</strong></div>}
+            {homeJson.industry == 'lifeSciences' && <div><strong>This is where you input past work experience. Since you selected the Life Sciences discipline, we suggest adding lab research or paper publications you participated in as well!</strong></div>}
+            {homeJson.industry == 'humanities' && <div><strong>This is where you input past work experience. Since you selected the Humanities discipline, we suggest adding papers or media you're proud of that you've done as well!</strong></div>}
+            {homeJson.industry == 'social' && <div><strong>This is where you input past work experience. Since you selected the Social Sciences discipline, we suggest adding volunteering or service learning you participated in as well!</strong></div>}
+            {homeJson.industry == 'business' && <div><strong>This is where you input past work experience. Since you selected the Business discipline, we suggest adding networking and communication skills you have as well!</strong></div>}
+
+            {localStorage.getItem('mode') == 'resume' && <div><strong>Also, since you're making a resume, we've given you a maximum of 3 experiences so you can focus on perfecting them!</strong></div>}
+            {localStorage.getItem('mode') == 'cv' && <div><strong>Also, since you're making a CV, we've given you a maximum of 5 experiences so you can add more detail!</strong></div>}
         <div className='selection_box'>
             <Box sx={{ align: 'center'}}>
             <FormControl sx={{ m: 3, width: '75ch' }} variant="standard">
@@ -284,6 +448,12 @@ const Page = () => {
         <div><h1></h1></div>
 
         {extraExper2}
+        <div><h1></h1></div>
+
+        {extraExper3}
+        <div><h1></h1></div>
+
+        {extraExper4}
         <div><h1></h1></div>
 
         <div>{addbutton}</div>

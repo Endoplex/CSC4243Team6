@@ -4,8 +4,7 @@ import "../components/css/home.css";
 import logo from '../images/logo.png';
 
 const homeDefaultValues = {
-    industry: '',
-    mode: ''
+    industry: ''
 }
 
 const Page = () => {
@@ -16,6 +15,16 @@ const Page = () => {
     const handleChange = (e) => {
         const {name, value} = e.target;
         setValues({ ...values, [name]: e.target.value });
+    };
+
+    const chooseResume = () => {
+        localStorage.setItem('mode', 'resume');
+        navigate('/personal');
+    };
+
+    const chooseCV = () => {
+        localStorage.setItem('mode', 'cv');
+        navigate('/personal');
     };
 
     React.useEffect(() => {
@@ -42,9 +51,9 @@ const Page = () => {
                 <option value="business">Business</option>
             </select>
             <h1>CREATE YOUR RESUME (for new users)</h1>
-            <button style={{ width: "175px", height: "60px" }} onClick={() => navigate('/personal')}>Start Resume</button>
+            <button style={{ width: "175px", height: "60px" }} onClick={() => chooseResume()}>Start Resume</button>
             <h1>More Experienced? Create a New CV</h1>
-            <button style={{ width: "175px", height: "60px" }} onClick={() => navigate('/personal')}>Start CV</button>
+            <button style={{ width: "175px", height: "60px" }} onClick={() => chooseCV()}>Start CV</button>
         </div>
     );
 }

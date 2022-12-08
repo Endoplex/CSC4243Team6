@@ -47,18 +47,32 @@ const Page = () => {
                 <p>{experienceJson.description1}</p>
             </div>
 
-            <div>
+            <div className="experience-box">
                 <p>{experienceJson.experience2}</p>
                 <p>{experienceJson.position2}</p>
                 {experienceJson.start2 != "" && <p>{experienceJson.start2} to {experienceJson.end2}</p>}
                 <p>{experienceJson.description2}</p>
             </div>
 
-            <div>
+            <div className="experience-box">
                 <p>{experienceJson.experience3}</p>
                 <p>{experienceJson.position3}</p>
                 {experienceJson.start3 != "" && <p>{experienceJson.start3} to {experienceJson.end3}</p>}
                 <p>{experienceJson.description3}</p>
+            </div>
+
+            <div className="experience-box">
+                <p>{experienceJson.experience4}</p>
+                <p>{experienceJson.position4}</p>
+                {experienceJson.start4 != "" && <p>{experienceJson.start4} to {experienceJson.end4}</p>}
+                <p>{experienceJson.description4}</p>
+            </div>
+
+            <div className="experience-box">
+                <p>{experienceJson.experience5}</p>
+                <p>{experienceJson.position5}</p>
+                {experienceJson.start5 != "" && <p>{experienceJson.start5} to {experienceJson.end5}</p>}
+                <p>{experienceJson.description5}</p>
             </div>
 
             
